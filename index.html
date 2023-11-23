@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Mortadela-MMA</title>
+      <meta charset="utf-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="centered-text"><a href="index.html" class="linkglowny">MORTADELA MMA</a></div>
+         <div class="buttonnav">
+            <a href="podstrony/zawodnicy.html" class="link"><div class="but">zawodnicy</div>
+            <a href="https://www.youtube.com/@essaessasigma123" class="link">
+               <div class="but">oglądaj</div>
+            </a>
+            <a href="podstrony/rejestracja.html" class="link">
+               <div class="but">rejestracja
+                  zawodnika
+               </div>
+            </a>
+            <a href="https://shatterwares.com/" class="link">
+               <div class="but">shatterwares</div>
+            </a>
+         </div>
+      </div>
+      <!--798 831 410 warszawska 34-->
+      <main>
+         <div class="pic"><img src="zawodnikos/olivers.png"class="mainpgimg" alt="Oliver Skiba"></div>
+         <div class="kloc">
+            <script>
+               var countDownDate = new Date("Nov 26, 2023 19:00:00").getTime();
+               
+               
+               var x = setInterval(function() {
+               
+                
+                 var now = new Date().getTime();
+                   
+                 
+                 var distance = countDownDate - now;
+                   
+                
+                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                   
+                 
+                 document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                 + minutes + "m " + seconds + "s ";
+                   
+               
+                 if (distance < 0) {
+                   clearInterval(x);
+                   document.getElementById("demo").innerHTML = "EXPIRED";
+                 }
+               }, 1000);
+            </script>
+            <p class="desc">Walka wieczoru</p>
+            <p id="demo"></p>
+            <p class="descb">68KG waga 66KG<br>
+			183cm wzrost 180cm<br>
+			15 wiek 16</p>
+         </div>
+         <div class="pic"><img src="zawodnikos/maksj.png" class="mainpgimg"alt="Oliver Skiba"></div>
+      </main>
+      <footer>
+         <p class="stopaL">Jakub Namyślak </p>
+         <p class="stopaR"> Michał Opałka</p>
+      </footer>
+   </body>
+</html>
