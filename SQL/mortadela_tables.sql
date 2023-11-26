@@ -118,13 +118,11 @@ INSERT INTO walki VALUES
 (1, 5, 1, 2, "20:00:00", 1);
 
 CREATE VIEW osiagniecia AS
-SELECT pelna_nazwa_gali, zawodnicy.id_zawodnika, CONCAT(zawodnicy.imie, " ", zawodnicy.nazwisko) AS "zawodnik", CONCAT(zaw1.imie, " ", zaw1.nazwisko, " VS ", zaw2.imie, " ", zaw2.nazwisko) AS "walka", wyniki.wynik FROM walki
+SELECT pelna_nazwa_gali, zawodnicy.id_zawodnika, CONCAT(zawodnicy.imie, " ", zawodnicy.nazwisko) AS "zawodnik", CONCAT(zawodnicy.imie, " ", zawodnicy.nazwisko, " VS ", zaw2.imie, " ", zaw2.nazwisko) AS "walka", wyniki.wynik FROM walki
 INNER JOIN gale
 ON walki.id_gali = gale.id_gali
 INNER JOIN zawodnicy
 ON zawodnicy.id_zawodnika = walki.zawodnik_1 OR zawodnicy.id_zawodnika = walki.zawodnik_2
-INNER JOIN zawodnicy AS zaw1
-ON zawodnik_1 = zaw1.id_zawodnika
 INNER JOIN zawodnicy AS zaw2
 ON zawodnik_2 = zaw2.id_zawodnika
 INNER JOIN wyniki

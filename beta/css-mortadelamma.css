@@ -1,0 +1,149 @@
+body, p{
+    margin: 0;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: unset;
+}
+.nav{
+    height: 3.5vw;
+    background-color: transparent;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100vw; 
+    padding: 0 2.5vw;
+    box-sizing: border-box;
+}
+.h-100p{
+    height: 100%;
+}
+.nav-button{
+    width: 6.75vw;
+}
+.nav-button-text{
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+.ff-ptsans{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.ff-archicoco{
+    font-family: Archicoco, sans-serif;
+}
+.c-white{
+    color: white;
+}
+.nav-button-watch{
+    background-image: linear-gradient(to right bottom, #daa520, #c3941d, #ad8319, #977316, #826313);
+}
+.enlarged{
+    font-size: 1.25vw;
+}
+.mg-r-0p75{
+    margin-right: 0.75vw;
+}
+.pos-rel{
+    position: relative;
+} 
+.nav-button-anim::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.15s ease-in;
+}
+.nav-button-anim:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.15s ease-in;
+}
+.nav-logo{
+    height: 70%;
+    width: auto;
+    margin-right: 0.7vw;
+}
+.nav-logo-text{
+    filter: drop-shadow(1.5px 1.5px 0.6px #bb5d59);
+}
+.fx{
+    display: flex;
+}
+.fx-ai-c{
+    align-items: center;
+}
+.fx-jc-c{
+    justify-content: center;
+}
+.fx-jc-spb{
+    justify-content: space-between;
+}
+.gradient-text{
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.mortadela-text-gradient{
+    background-image: linear-gradient(to right bottom, #ffa8a8, #dd8280, #bb5d59, #983934, #741212);
+}
+.h-100vh{
+    height: 100vh;
+}
+.header{
+    width: 100vw;
+}
+.header-side{
+    background-size: cover;
+    background-position: 20% center;
+}
+.sides-static{
+    width: 50%;
+}
+.side-1{
+    background-image: url("RESOURCES/side1.png");
+}
+.side-2{
+    background-image: url("RESOURCES/side3.png");
+}
+.side-abs-background{
+    background-color: white;
+    width: 53%;
+}
+.pos-abs{
+    position: absolute;
+}
+.side-abs{
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+}
+.side-3{
+    background-image: url("RESOURCES/side2.png");
+}
+.mmma-header-blob{
+    z-index: 1;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    flex-direction: column;
+}
+.standard-drop-shadow{
+    filter: drop-shadow(0vw 0vw 0.5vw #252525);
+}
+.header-image{
+    width: 10vw;
+}
