@@ -1,4 +1,4 @@
-body, p{
+body, p, .mg-none{
     margin: 0;
 }
 a{
@@ -14,6 +14,8 @@ a{
     top: 0;
     width: 100vw; 
     padding: 0 2.5vw;
+}
+.bs-bb{
     box-sizing: border-box;
 }
 .h-100p{
@@ -101,12 +103,10 @@ a{
 .h-100vh{
     height: 100vh;
 }
-.header{
-    width: 100vw;
-}
 .header-side{
     background-size: cover;
     background-position: 20% center;
+    box-shadow: inset 0px -30px 30px black;
 }
 .sides-static{
     width: 50%;
@@ -135,10 +135,12 @@ a{
 }
 .mmma-header-blob{
     z-index: 1;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 4vw;
+}
+.fx-dir-c{
     flex-direction: column;
 }
 .standard-drop-shadow{
@@ -147,3 +149,56 @@ a{
 .header-image{
     width: 10vw;
 }
+.standard-section{
+    padding: 5vw 3vw;
+}
+.standard-section{
+    background-color: black;
+}
+.standard-header{
+    color: red;
+    font-size: 2.75vw;
+    margin-bottom: 1.5625vw;
+}
+.standard-paragraph{
+    font-size: 1.35vw;
+    font-family: Raleway, sans-serif;
+    max-width: 60vw;
+    text-align: center;
+}
+.hr{
+    background-color: grey;
+    width: 75%;
+    height: 1px;
+    border: 3px solid grey;
+    border-radius: 2.5px;
+    margin: 3vw 0;
+}
+.zawodnik{
+    width: 10vw;
+    border: goldenrod ridge 4px;
+    border-radius: 6px;
+    padding: 2vw 2vw 0 2vw;
+    margin-bottom : 1vw;
+}
+.mg-r-2vw{
+    margin-right: 2vw;
+}
+@keyframes fadeInTT{
+    from{
+        transform: scale(0.7) translateY(-60px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+.op-0{
+    opacity: 0;
+}
+.anim-fadeInTT{
+    animation: fadeInTT ease-in-out 1s forwards;
+}
+.footer{
+    height: 5vw;
+    background-color: darkgrey;
+};

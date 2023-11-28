@@ -69,13 +69,14 @@ CREATE TABLE gale(
 	id_gali int UNSIGNED NOT NULL AUTO_INCREMENT,
 	pelna_nazwa_gali varchar(255) NOT NULL UNIQUE,
 	data_gali datetime NOT NULL,
+	opis_gali text NOT NULL,
 	ilosc_rezerwacji int(3) UNSIGNED NOT NULL DEFAULT 0,
 	max_ilosc_rezerwacji int(3) UNSIGNED NOT NULL DEFAULT 100,
 	koszt_wstepu numeric(6,2) UNSIGNED NOT NULL,
     PRIMARY KEY (id_gali)
 );
 INSERT INTO gale VALUES
-(1, "Mortadela MMA: guwno guwno guwno", "2023-11-19 18:45:00", 0, 300, 0);
+(1, "Mortadela MMA: guwno guwno guwno", "2023-11-19 18:45:00", "Gala ggg to najmięsistsze zdarzenie w uniwersum! Podziwiaj naszych profesjonalnych zawodników staczających sobie łomot na milion różnych sposobów!", 0, 300, 0);
 
 CREATE TABLE wyniki(
 	id_wyniku int UNSIGNED AUTO_INCREMENT NOT NULL,
@@ -355,11 +356,11 @@ CREATE TABLE kandydaci(
 	ON DELETE SET NULL
 );
 
-DROP USER IF EXISTS 'administrator'@'127.0.0.1';
-DROP USER IF EXISTS 'inputoutput'@'127.0.0.1';
+DROP USER IF EXISTS 'administrator'@'localhost';
+DROP USER IF EXISTS 'inputoutput'@'localhost';
 
-CREATE USER 'administrator'@'127.0.0.1' IDENTIFIED BY 'databgart4TEWfg432443132';
-GRANT ALL PRIVILEGES ON mortadelamma.* TO 'administrator'@'127.0.0.1';
+CREATE USER 'administrator'@'localhost' IDENTIFIED BY 'databgart4TEWfg432443132';
+GRANT ALL PRIVILEGES ON mortadelamma.* TO 'administrator'@'localhost';
 
-CREATE USER 'inputoutput'@'127.0.0.1' IDENTIFIED BY 'sustromming624652';
-GRANT SELECT, INSERT ON mortadelamma.* TO 'administrator'@'127.0.0.1';
+CREATE USER 'inputoutput'@'localhost' IDENTIFIED BY '123';
+GRANT SELECT, INSERT ON mortadelamma.* TO 'inputoutput'@'localhost';
